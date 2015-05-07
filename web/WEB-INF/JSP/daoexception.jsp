@@ -6,9 +6,7 @@
 <!doctype html>
 <html lang='nl'>
 <head>
-    <c:import url='/WEB-INF/JSP/head.jsp'>
-        <c:param name='title' value='Problemen bij ophalen data'/>
-    </c:import>
+    <vdab:head title='Problemen bij ophalen data'/>
 </head>
 <body>
 <vdab:menu/>

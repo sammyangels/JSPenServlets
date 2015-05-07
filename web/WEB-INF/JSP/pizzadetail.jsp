@@ -9,9 +9,7 @@
 <!doctype html>
 <html lang="nl">
     <head>
-        <c:import url="/WEB-INF/JSP/head.jsp">
-            <c:param name="title" value="${pizza.naam}"/>
-        </c:import>
+        <vdab:head title='${pizza.naam}'/>
     </head>
     <body>
     <vdab:menu/>

@@ -6,9 +6,7 @@
 <!doctype html>
 <html lang="nl">
 <head>
-    <c:import url="head.jsp">
-        <c:param name="title" value="Voorkeurpizza's"/>
-    </c:import>
+    <vdab:head title='Voorkeurpizzas'/>
 </head>
 <body>
 <vdab:menu/>

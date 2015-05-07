@@ -12,9 +12,7 @@
 <!doctype html>
 <html lang="nl">
 <head>
-    <c:import url='/WEB-INF/JSP/head.jsp'>
-        <c:param name='title' value='Cookies'/>
-    </c:import>
+    <vdab:head title='Cookies'/>
 </head>
 <body>
 <vdab:menu/>
