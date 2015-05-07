@@ -2,6 +2,7 @@ package be.vdab.dao;
 
 import be.vdab.entities.Pizza;
 import com.sun.org.apache.bcel.internal.generic.RET;
+import sun.rmi.runtime.Log;
 
 import java.math.BigDecimal;
 import java.sql.*;
@@ -10,12 +11,14 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by Samuel Engelen on 28/04/2015.
  */
 public class PizzaDAO extends AbstractDAO {
-
+    private final static Logger logger = Logger.getLogger(PizzaDAO.class.getName());
 
     private static final String BEGIN_SELECT = "select id, naam, prijs, pikant from pizzas ";
     private static final String FIND_ALL_SQL = BEGIN_SELECT + "order by naam";
@@ -33,6 +36,7 @@ public class PizzaDAO extends AbstractDAO {
             }
             return pizzas;
         } catch (SQLException ex) {
+            logger.log(Level.SEVERE, "Probleem met database pizzaluigi", ex);
             throw new DAOException(ex);
         }
     }
@@ -53,6 +57,7 @@ public class PizzaDAO extends AbstractDAO {
                 return null;
             }
         } catch (SQLException ex) {
+            logger.log(Level.SEVERE, "Probleem met database pizzaluigi", ex);
             throw new DAOException(ex);
         }
     }
@@ -70,6 +75,7 @@ public class PizzaDAO extends AbstractDAO {
                 return pizzas;
             }
         } catch (SQLException ex) {
+            logger.log(Level.SEVERE, "Probleem met database pizzaluigi", ex);
             throw new DAOException(ex);
         }
     }
@@ -86,6 +92,7 @@ public class PizzaDAO extends AbstractDAO {
                 pizza.setId(resultSet.getLong(1));
             }
         } catch (SQLException ex) {
+            logger.log(Level.SEVERE, "Probleem met database pizzaluigi", ex);
             throw new DAOException(ex);
         }
     }

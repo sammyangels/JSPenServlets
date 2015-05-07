@@ -40,6 +40,8 @@ public class IndexServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("aantalPizzasVerkocht", 23000);
+        request.setAttribute("nu", Calendar.getInstance().getTime());
         request.setAttribute("aantalKeerBekeken", aantalKeerBekeken.incrementAndGet());
         request.setAttribute("zaakvoerder", zaakvoerder);
         request.setAttribute("begroeting", new Begroeting());
