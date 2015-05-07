@@ -15,6 +15,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * Created by Samuel Engelen on 28/04/2015.
  */
 public class PizzaDAO extends AbstractDAO {
+
+
     private static final String BEGIN_SELECT = "select id, naam, prijs, pikant from pizzas ";
     private static final String FIND_ALL_SQL = BEGIN_SELECT + "order by naam";
     private static final String READ_SQL = BEGIN_SELECT + "where id=?";
