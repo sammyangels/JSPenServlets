@@ -7,6 +7,7 @@
   Date: 22/04/2015
 --%>
 <%@page contentType='text/html' pageEncoding='UTF-8' session='false' %>
+<%@taglib uri='http://vdab.be/tags' prefix='vdab'%>
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core'%>
 <%@ taglib prefix="a" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!doctype html>
@@ -17,7 +18,7 @@
     </c:import>
 </head>
 <body>
-<c:import url="/WEB-INF/JSP/menu.jsp"/>
+<vdab:menu/>
     <h1>Pizza's
         <c:forEach begin="1" end="5">
             &#9733; <%-- HTML code van ster --%>

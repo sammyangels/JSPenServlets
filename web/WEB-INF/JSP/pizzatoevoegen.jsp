@@ -2,6 +2,7 @@
 <%-- Written by Samuel Engelen | Date: 28/04/2015 --%>
 
 <%@page contentType='text/html' pageEncoding='UTF-8' session='false' %>
+<%@taglib uri='http://vdab.be/tags' prefix='vdab'%>
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
 <!doctype html>
 <html lang="nl">
@@ -11,7 +12,7 @@
         </c:import>
     </head>
     <body>
-        <c:import url='/WEB-INF/JSP/menu.jsp' />
+    <vdab:menu/>
         <h1>Pizza toevoegen</h1>
         <form method='post' id='toevoegform' enctype="multipart/form-data">
             <label>Naam<span>${fouten.naam}</span>

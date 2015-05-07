@@ -4,6 +4,7 @@
 <%-- Written by Samuel Engelen | Date: 28/04/2015 --%>
 
 <%@page contentType='text/html' pageEncoding='UTF-8' session='false' %>
+<%@taglib uri='http://vdab.be/tags' prefix='vdab'%>
 <%@taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
 <!doctype html>
 <html lang="nl">
@@ -13,7 +14,7 @@
         </c:import>
     </head>
     <body>
-        <c:import url="menu.jsp"/>
+    <vdab:menu/>
         <c:choose>
             <c:when test="${empty pizza}">
                     <div class="fout">${empty fout ? "Pizza niet gevonden" : fout}</div>
