@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="JSPenServlets:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/JSPenServlets_war</output-path>
+    <root id="archive" name="JSPenServlets_war.war">
+      <element id="artifact" artifact-name="JSPenServlets:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="jstl-1.2" module-name="JSPenServlets" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
